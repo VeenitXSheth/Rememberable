@@ -13,7 +13,6 @@ const landingView = document.getElementById('landing-view');
 const signupView = document.getElementById('join-view');
 const loginView = document.getElementById('login-view');
 const appView = document.getElementById('app-view');
-const settingsView = document.getElementById('settings-view');
 
 const loginBtnNav = document.querySelector('.login-btn-nav');
 const signupBtnNav = document.querySelector('.join-btn-nav');
@@ -21,6 +20,9 @@ const signupBtnHero = document.querySelector('.join-btn-hero');
 
 const loginLink = document.getElementById('login-link');
 const signupLink = document.getElementById('signup-link');
+
+const loginModal = document.querySelector('.login-btn-modal');
+const signupModal = document.querySelector('.join-btn-modal');
 
 loginLink.addEventListener('click', () => {
 
@@ -71,6 +73,46 @@ signupBtnHero.addEventListener('click', () => {
   appView.style.display = 'none';
 
 });
+
+// Mobile Responsiveness 
+
+const modalBtn = document.querySelector('#mobile-menu');
+const modal = document.getElementById('modal');
+const modalCloseBtn = document.querySelector('#close-btn');
+
+modalBtn.addEventListener('click', () => {
+
+  modal.style.display = 'flex';
+
+});
+
+modalCloseBtn.addEventListener('click', () => {
+
+  modal.style.display = 'none';
+
+})
+
+loginModal.addEventListener('click', () => {
+
+  landingView.style.display = 'none';
+  loginView.style.display = 'flex';
+  loginError.style.display = 'none';
+  signupView.style.display = 'none';
+  appView.style.display = 'none';
+  modal.style.display = 'none';
+
+})
+
+signupModal.addEventListener('click', () => {
+
+  landingView.style.display = 'none';
+  loginView.style.display = 'none';
+  signupView.style.display = 'flex';
+  signupError.style.display = 'none';
+  appView.style.display = 'none';
+  modal.style.display = 'none';
+
+})
 
 // Authentication Functionality
 

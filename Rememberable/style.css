@@ -511,10 +511,52 @@ main #landing-view nav span {
   display: none;
 }
 
+main #modal {
+  position: absolute;
+  margin: 16px 16px 16px;
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+  background: white;
+  color: black;
+  padding: 50px 50px 50px;
+  border-radius: 10px;
+  box-shadow: 50px 50px 50px rgba(0, 0, 0, 0.25);
+}
+
+main #modal h1 {
+  margin-bottom: 16px;
+}
+
+main #modal button {
+  background: #646cff;
+  color: white;
+  padding: 12.5px 30px 12.5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  transition: 0.3s ease;
+}
+
+main #modal button:hover {
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+
+main #modal span {
+  display: block;
+  margin: auto;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
 @media (max-width: 400px) {
   main #landing-view nav span {
     display: flex;
     margin-bottom: 4px;
+    cursor: pointer;
   }
 
   main #landing-view nav button {
