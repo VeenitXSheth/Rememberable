@@ -1,0 +1,632 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background: #1e1e20;
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main #landing-view {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main #landing-view nav {
+  height: fit-content;
+  width: 100%;
+  padding: 25px 0px 25px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+}
+
+main #landing-view nav h1 {
+  margin-left: 12.5%;
+  color: white;
+  margin-right: 50%;
+}
+
+main #landing-view nav .login-btn-nav {
+  background: #252429;
+  color: white;
+  padding: 12.5px 30px 12.5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-right: 16px;
+  transition: 0.3s ease;
+}
+
+main #landing-view nav .login-btn-nav:hover {
+  border: 1px solid #646cff;
+  cursor: pointer;
+}
+
+main #landing-view nav .join-btn-nav {
+  background: #646cff;
+  color: white;
+  padding: 12.5px 30px 12.5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-right: 16px;
+  transition: 0.3s ease;
+}
+
+main #landing-view nav .join-btn-nav:hover {
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+
+main #landing-view .content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main #landing-view .content h1 {
+  font-size: 60px;
+  text-align: center;
+  line-height: 64px;
+}
+
+main #landing-view .content h1 .gradient {
+  background: linear-gradient(135deg, #646cff, royalblue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+main #landing-view .content p {
+  margin-left: 512px;
+  margin-right: 512px;
+  text-align: center;
+  margin-top: 32px;
+}
+
+main #landing-view .content button {
+  background: #646cff;
+  color: white;
+  margin-top: 32px;
+  padding: 12.5px 30px 12.5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+main #landing-view .content button:hover {
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+
+main #join-view {
+  height: 100%;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main #join-view form {
+  height: 70%;
+  width: 25%;
+  background: #252429;
+  color: white;
+  border-radius: 5px;
+  padding: 50px 50px 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+main #join-view form p {
+  margin-bottom: 48px;
+}
+
+main #join-view form label {
+  margin-bottom: 8px;
+}
+
+main #join-view form input {
+  background: #1e1e20;
+  color: white;
+  padding: 12.5px 30px 12.5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 32px;
+  transition: 0.3s ease;
+}
+
+main #join-view form input:hover {
+  border: 1px solid #646cff;
+}
+
+main #join-view form input:focus {
+  outline: none;
+  border: 2px solid #646cff;
+}
+
+main #join-view form #signup-btn-form {
+  background: #646cff;
+  color: white;
+  padding: 12.5px 30px 12.5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+main #join-view form p {
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+main #join-view form p a {
+  text-direction: none;
+  color: #646cff;
+  cursor: pointer;
+}
+
+main #join-view form span {
+  display: block;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+main #join-view form #google {
+  background: #1e1e20;
+  color: white;
+  padding: 12.5px 30px 12.5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+main #join-view form #google:hover {
+  border: 1px solid #646cff;
+}
+
+main #join-view form #google img {
+  height: 16px;
+  width: 16px;
+  margin-right: 8px;
+}
+
+main #join-view #signup-error {
+  position: absolute;
+  z-index: 5;
+  background: #fa7773;
+  color: red;
+  padding: 10px 10px 10px;
+  border-radius: 5px;
+  display: none;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 32px;
+  margin-right: 32px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid red;
+}
+
+main #join-view #signup-error span {
+  margin-right: 4px;
+}
+
+main #login-view {
+  height: 100%;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main #login-view form {
+  height: 70%;
+  width: 25%;
+  background: #252429;
+  color: white;
+  border-radius: 5px;
+  padding: 50px 50px 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+main #login-view form p {
+  margin-bottom: 48px;
+}
+
+main #login-view form label {
+  margin-bottom: 8px;
+}
+
+main #login-view form input {
+  background: #1e1e20;
+  color: white;
+  padding: 12.5px 30px 12.5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 32px;
+  transition: 0.3s ease;
+}
+
+main #login-view form input:hover {
+  border: 1px solid #646cff;
+}
+
+main #login-view form input:focus {
+  outline: none;
+  border: 2px solid #646cff;
+}
+
+main #login-view form #login-btn-form {
+  background: #646cff;
+  color: white;
+  padding: 12.5px 30px 12.5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+main #login-view form p {
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+main #login-view form p a {
+  text-direction: none;
+  color: #646cff;
+  cursor: pointer;
+}
+
+main #login-view form span {
+  display: block;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+main #login-view form #google-btn {
+  background: #1e1e20;
+  color: white;
+  padding: 12.5px 30px 12.5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+main #login-view form #google-btn:hover {
+  border: 1px solid #646cff;
+}
+
+main #login-view form #google-btn img {
+  height: 16px;
+  width: 16px;
+  margin-right: 8px;
+}
+
+main #login-view #login-error {
+  position: absolute;
+  z-index: 5;
+  background: #fa7773;
+  color: red;
+  padding: 10px 10px 10px;
+  border-radius: 5px;
+  display: none;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 32px;
+  margin-right: 32px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid red;
+}
+
+main #login-view #login-error span {
+  margin-right: 4px;
+}
+
+main #app-view {
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+main #app-view nav {
+  height: fit-content;
+  width: 100%;
+  padding: 25px 0px 25px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 5;
+}
+
+main #app-view nav h1 {
+  margin-left: 12.5%;
+  margin-right: 55%;
+}
+
+main #app-view nav #sign-out {
+  background: #646cff;
+  color: white;
+  padding: 12.5px 30px 12.5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-right: 16px;
+  transition: 0.3s ease;
+}
+
+main #app-view nav #sign-out:hover {
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+
+main #app-view .content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main #app-view .content h1 {
+  margin-top: 10%;
+  margin-left: 12.5%;
+}
+
+main #app-view .content ul {
+  margin-left: 12.5%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  list-style: none;
+}
+
+main #app-view .content ul form {
+  display: flex;
+  flex-direction: column;
+  width: 84%;
+}
+
+main #app-view .content ul form label {
+  margin-bottom: 8px;
+}
+
+main #app-view .content ul form input {
+  background: #252429;
+  color: white;
+  padding: 12.5px 30px 12.5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  transition: 0.3s ease;
+}
+
+main #app-view .content ul form input:hover {
+  border: 1px solid #646cff;
+}
+
+main #app-view .content ul form input:focus {
+  outline: none;
+  border: 2px solid #646cff;
+}
+
+main #app-view .content ul form button {
+  background: #646cff;
+  color: white;
+  padding: 12.5px 30px 12.5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 64px;
+  transition: 0.3s ease;
+}
+
+main #app-view .content ul form button:hover {
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+
+main #app-view .content ul li {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 12.5px 30px 12.5px;
+  background: #252429;
+  color: white;
+  width: 80.25%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+main #app-view .content ul li span {
+  color: red;
+  background: #f77168;
+  padding: 7.5px 7.5px 7.5px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 73%;
+  display: none;
+  transition: 0.3s ease;
+}
+
+main #app-view .content ul li span:hover {
+  filter: brightness(1.2);
+}
+
+main #landing-view nav span {
+  display: none;
+}
+
+@media (max-width: 400px) {
+  main #landing-view nav span {
+    display: flex;
+    margin-bottom: 4px;
+  }
+
+  main #landing-view nav button {
+    display: none;
+  }
+
+  main #landing-view nav {
+    align-items: center;
+  }
+
+  main #landing-view nav h1 {
+    font-size: 18px;
+    margin-right: 37.5%;
+    margin-left: 10%;
+  }
+
+  main #landing-view .content h1 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+
+  main #landing-view .content p {
+    font-size: 14px;
+    margin: 0;
+    margin-top: 32px;
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+
+  main #login-view form {
+    width: 60%;
+    height: fit-content;
+    padding-bottom: 25px;
+  }
+
+  main #login-view form h1 {
+    font-size: 26px;
+  }
+
+  main #login-view form p {
+    font-size: 11px;
+    margin-top: 4px;
+    margin-bottom: 48px;
+  }
+
+  main #login-view form label {
+    font-size: 14px;
+  }
+
+  main #login-view form button {
+    margin-bottom: 8px;
+  }
+
+  main #join-view form {
+    width: 60%;
+    height: fit-content;
+    padding-bottom: 25px;
+  }
+
+  main #join-view form h1 {
+    font-size: 23px;
+  }
+
+  main #join-view form p {
+    font-size: 11px;
+    margin-top: 4px;
+    margin-bottom: 48px;
+  }
+
+  main #join-view form label {
+    font-size: 14px;
+  }
+
+  main #join-view form button {
+    margin-bottom: 8px;
+  }
+
+  main #app-view nav {
+    align-items: center;
+  }
+
+  main #app-view nav h1 {
+    font-size: 18px;
+    margin-right: 25%;
+    margin-left: 10%;
+  }
+
+  main #app-view nav #sign-out {
+    font-size: 10px;
+    margin-bottom: 4px;
+    padding: 10px 15px 10px;
+  }
+
+  main #app-view .content h1 {
+    margin-left: 10%;
+    font-size: 30px;
+    margin-top: 30%;
+  }
+
+  main #app-view .content ul {
+    margin-left: 10%;
+  }
+
+  main #app-view .content ul li {
+    margin-top: 0px;
+    width: 67.5%;
+  }
+}
+
+@media (min-width: 1400px) {
+  main #landing-view .content p {
+    margin-left: 256px;
+    margin-right: 256px;
+  }
+}

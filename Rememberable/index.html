@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Rememberable Logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Rememberable</title>
+  </head>
+  <body>
+
+    <main>
+      <div id="landing-view">
+        <nav>
+          <h1>Rememberable</h1>
+          <button class="login-btn-nav">Login</button>
+          <button class="join-btn-nav">Join</button>
+          <span id="mobile-menu" class="material-symbols-outlined">menu</span>
+        </nav>
+        <div class="content">
+          <h1>Make every moment unforgettable <br> with <span class="gradient">Rememberable</span>.</h1>
+          <p>Whether you're looking to keep a daily journal, record your travels, or simply write down your thoughts and feelings, Rememberable is the perfect app for you. Start capturing your memories today with Rememberable - the app that helps you remember what matters most.</p>
+          <button class="join-btn-hero">Start Writing</button>
+        </div>
+      </div>
+      <div style="display: none;" id="join-view">
+        <form class="signup">
+          <h1>Join The Platform 👋</h1>
+          <p>Fill out the information below to start writing</p>
+          <label for="email">Email</label>
+          <input type="email" placeholder="Email" name="email">
+          <label for="password">Password</label>
+          <input type="password" placeholder="Password" name="password">
+          <button id="signup-btn-form" type="submit">Sign up</button>
+          <p>Already have an account? <a href="#" id="login-link">Login</a></p>
+          <span>or</span>
+          <button id="google">
+            <img src="/google.png">
+            Sign up with Google
+          </button>
+        </form>
+        <span id="signup-error">
+          <span class="material-symbols-outlined">error</span>
+          
+        </span>
+      </div>
+      <div style="display: none;" id="login-view">
+        <form class="login">
+          <h1>Welcome Back 👋</h1>
+          <p>Fill out the information you used to join</p>
+          <label for="email">Email</label>
+          <input type="email" placeholder="Email" name="email">
+          <label for="password">Password</label>
+          <input type="password" placeholder="Password" name="password">
+          <button id="login-btn-form" type="submit">Login</button>
+          <p>Don't have an account? <a href="#" id="signup-link">Signup</a></p>
+          <span>or</span>
+          <button id="google-btn">
+            <img src="/google.png">
+            Sign in with Google
+          </button>
+        </form>
+        <span id="login-error">
+          <span class="material-symbols-outlined">error</span>
+          
+        </span>
+      </div>
+      <div style="display: none;" id="app-view">
+        <nav>
+          <h1>Rememberable</h1>
+          <button id="sign-out">Sign out</button>
+        </nav>
+        <div class="content">
+          <h1>Your Memories</h1>
+          <ul id="memory-list">
+            <form class="add-memory">
+              <label for="memory">Add Memory</label>
+              <input type="text" placeholder="Start typing here" name="memory">
+              <button type="submit">Add</button>
+            </form>
+          </ul>
+        </div>
+      </div>
+    </main>
+    
+    <script type="module" src="/main.js"></script>
+
+  </body>
+</html>
